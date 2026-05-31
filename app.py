@@ -47,5 +47,12 @@ if st.button("Generate Brochure"):
             st.markdown("## Generated Brochure")
             st.markdown(brochure)
 
+            st.download_button(
+                label="Download Brochure as Markdown",
+                data=brochure,
+                file_name=f"{company_name.lower().replace(' ', '_')}_brochure.md",
+                mime="text/markdown"
+            )
+
         except Exception as error:
             st.error(f"Something went wrong: {error}")
