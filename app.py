@@ -1,5 +1,8 @@
 import streamlit as st
 
+from src.scraper import scrape_website
+from src.brochure_generator import generate_brochure
+
 
 st.set_page_config(
     page_title="AI Brochure Generator",
@@ -12,8 +15,8 @@ st.title("AI Brochure Generator")
 
 st.write(
     """
-    This app will generate a professional company brochure by reading and
-    analyzing content from a company website.
+    This app generates a professional company brochure by reading and analyzing
+    content from a company website.
     """
 )
 
@@ -26,6 +29,23 @@ if st.button("Generate Brochure"):
     if not company_name or not company_url:
         st.warning("Please enter both the company name and website URL.")
     else:
-        st.info("Brochure generation logic will be added soon.")
-        st.write(f"Company: {company_name}")
-        st.write(f"Website: {company_url}")
+        try:
+            with st.spinner("Scraping website..."):
+                website_text = scrape_website(company_url)
+
+            st.success("Website scraped successfully.")
+
+            with st.spinner("Generating brochure..."):
+                brochure = generate_brochure(
+                    company_name=company_name,
+                    website_url=company_url,
+                    website_text=website_text
+                )
+
+            st.success("Brochure generated successfully.")
+
+            st.markdown("## Generated Brochure")
+            st.markdown(brochure)
+
+        except Exception as error:
+            st.error(f"Something went wrong: {error}")
