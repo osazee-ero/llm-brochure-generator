@@ -69,6 +69,10 @@ cd llm-brochure-generator
 pip install -r requirements.txt
 streamlit run app.py
 
+## Demo
+
+Live app: https://llm-brochure-generator-aosbbv4gwe2wvgcztn2qmz.streamlit.app/
+
 
 ## Status
 
