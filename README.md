@@ -59,7 +59,7 @@ llm-brochure-generator/
 ```
 
 ## How to Run
-git clone https://github.com/ememosazee19991990/llm-brochure-generator.git
+git clone https://github.com/osazeeero/llm-brochure-generator.git
 cd llm-brochure-generator
 pip install -r requirements.txt
 streamlit run app.py
