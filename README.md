@@ -56,6 +56,8 @@ llm-brochure-generator/
 ├── screenshots/
 └── examples/
 
+```
+
 ## How to Run
 git clone https://github.com/ememosazee19991990/llm-brochure-generator.git
 cd llm-brochure-generator
