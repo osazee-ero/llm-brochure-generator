@@ -58,6 +58,11 @@ llm-brochure-generator/
 
 ```
 
+## Screenshots
+
+![AI Brochure Generator Screenshot](screenshots/app_screenshot.png)
+
+
 ## How to Run
 git clone https://github.com/osazee-ero/llm-brochure-generator.git
 cd llm-brochure-generator
