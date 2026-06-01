@@ -56,8 +56,51 @@ llm-brochure-generator/
 ├── screenshots/
 └── examples/
 
+```
+
 ## How to Run
-git clone https://github.com/ememosazee19991990/llm-brochure-generator.git
+git clone https://github.com/osazee-ero/llm-brochure-generator.git
 cd llm-brochure-generator
 pip install -r requirements.txt
 streamlit run app.py
+
+
+## Status
+
+Core version completed.
+
+Current features:
+
+- Scrapes a company homepage
+- Finds relevant internal links such as About, Products, Services, Careers, and Contact pages
+- Extracts clean website text
+- Uses an LLM to generate a professional brochure
+- Displays the brochure in a Streamlit app
+- Allows the brochure to be downloaded as a Markdown file
+
+## What I Learned
+
+Through this project, I practiced:
+
+- Building an LLM-powered application with Python
+- Scraping and cleaning website content
+- Selecting useful internal links from a company website
+- Using environment variables safely for API keys
+- Creating a simple Streamlit user interface
+- Structuring a project for GitHub and portfolio presentation
+- Adding downloadable AI-generated output
+
+## Application Workflow
+
+```text
+User enters company name and website URL
+        ↓
+App scrapes the homepage
+        ↓
+App finds useful internal links
+        ↓
+App extracts clean text from selected pages
+        ↓
+LLM generates a company brochure
+        ↓
+User views and downloads the brochure
